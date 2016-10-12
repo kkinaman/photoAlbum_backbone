@@ -1,0 +1,1 @@
+// Will map to the bookshelf db table, images
