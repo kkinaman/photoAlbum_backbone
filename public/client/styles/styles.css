@@ -1,0 +1,35 @@
+.featImageDisplay {
+  width: 500px;
+  height: 400px;
+  background-color: #eee;
+}
+
+.list-group-item {
+  font-size: 18px;
+}
+
+.leftAlign {
+  float: left;
+}
+
+.rightAlign {
+  float: right;
+}
+
+.featImageName {
+  padding-left: 10px;
+  color: #333;
+}
+
+.rating {
+  direction: rtl;
+  color: #eee;
+  font-size: 24px;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   color: #DAA520;
+}

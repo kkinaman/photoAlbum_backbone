@@ -1,8 +1,6 @@
 var FeatImageView = Backbone.View.extend({
 
-  initialize: function() {
-
-  },
+  // template: _.template('<img src=<%= url %>>'),
 
   setImage: function(image) {
     this.model = image;
@@ -10,7 +8,12 @@ var FeatImageView = Backbone.View.extend({
   },
 
   render: function() {
-    return this.$el.html('<span>FeatImage!</span>');
+    this.$el.find('.featImageDisplay').css({
+      'background-image': 'url(' + this.model.get('url') + ')',
+      'background-size': 'cover'
+    });
+    this.$el.find('.featImageName').text(this.model.get('name'));
+    // this.$el.append('<span class="featImageName">' + this.model.get('title') + '</span>');
   }
 
 });

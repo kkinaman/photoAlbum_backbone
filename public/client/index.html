@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title></title>
-</head>
-<body>
+  <head>
+    <title></title>
+  </head>
+  <body>
 
-  <script src="bower_components/jquery/jquery.min.js"></script>
-  <script src="bower_components/underscore/underscore.js"></script>
-  <script src="bower_components/backbone/backbone.js"></script>
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
 
-  <script src="data/data.js"></script>
+    <script src="data/data.js"></script>
 
-  <script src="models/ImageModel.js"></script>
-  <script src="models/AppModel.js"></script>
+    <script src="models/ImageModel.js"></script>
+    <script src="models/AppModel.js"></script>
 
-  <script src="collections/Images.js"></script>
+    <script src="collections/Images.js"></script>
 
-  <script src="views/ImagesView.js"></script>
-  <script src="views/ImageEntryView.js"></script>
-  <script src="views/FeatImageView.js"></script>
-  <script src="views/app.js"></script>
+    <script src="views/ImagesView.js"></script>
+    <script src="views/ImageEntryView.js"></script>
+    <script src="views/FeatImageView.js"></script>
+    <script src="views/app.js"></script>
 
+    <link rel='stylesheet' href='styles/styles.css'>
+    <link rel='stylesheet' href="../../node_modules/bootstrap/dist/css/bootstrap.css">
 
-  <link rel='stylesheet' href='styles/styles.css'>
+    <script>
+      $(function() {
 
-<!-- Provide components for views to connect to -->
-  <script>
-    $(function() {
+        var images = new Images(imagesData);
 
-      var images = new Images(imagesData);
+        var app = new AppModel({imagesList: images});
 
-      var app = new AppModel({imagesList: images});
+        var appView = new AppView({model: app});
 
-      var appView = new AppView({model: app});
+        $('body').append(appView.render());
+      });
+    </script>
 
-      // put the view onto the screen
-      $('body').prepend(appView.render());
-    });
-  </script>
-</body>
+    <div class="jumbotron">
+      <div class='container header'>
+        <h1>Photo Album</h1>
+      </div>
+    </div>
+    <div class='container'>
+      <div class='row'>
+        <div class="col-md-4">
+          <ul id='photoList' class="list-group">
+          </ul>
+        </div>
+        <div class="col-md-5 col-md-offset-2" id='featPhoto'>
+          <div class="featImageDisplay"></div>
+          <h3><span class="featImageName leftAlign"></span></h3>
+          <div class="rating rightAlign">
+            <span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </body>
 </html>
