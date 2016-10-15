@@ -1,3 +1,42 @@
-<!-- Include all source files -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <script src="bower_components/jquery/jquery.min.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+
+  <script src="data/data.js"></script>
+
+  <script src="models/ImageModel.js"></script>
+  <script src="models/AppModel.js"></script>
+
+  <script src="collections/Images.js"></script>
+
+  <script src="views/ImagesView.js"></script>
+  <script src="views/ImageEntryView.js"></script>
+  <script src="views/FeatImageView.js"></script>
+  <script src="views/app.js"></script>
+
+
+  <link rel='stylesheet' href='styles/styles.css'>
 
 <!-- Provide components for views to connect to -->
+  <script>
+    $(function() {
+
+      var images = new Images(imagesData);
+
+      var app = new AppModel({imagesList: images});
+
+      var appView = new AppView({model: app});
+
+      // put the view onto the screen
+      $('body').prepend(appView.render());
+    });
+  </script>
+</body>
+</html>

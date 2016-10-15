@@ -1,1 +1,1 @@
-// Establish database connection to photoAlbum.sqlite
+// Establish database connection to mongoDb photoAlbumDb

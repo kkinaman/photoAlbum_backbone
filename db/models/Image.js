@@ -1,1 +1,1 @@
-// Will map to the bookshelf db table, images
+// Will map to the mongo db table, images
