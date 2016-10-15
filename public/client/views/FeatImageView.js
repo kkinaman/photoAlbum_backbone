@@ -11,7 +11,7 @@ var FeatImageView = Backbone.View.extend({
     this.$el.find('.featImageDisplay').css({
       'background-image': 'url(' + this.model.get('url') + ')',
       'background-size': 'cover'
-    });
+    }).text('');
     this.$el.find('.featImageName').text(this.model.get('name'));
     // this.$el.append('<span class="featImageName">' + this.model.get('title') + '</span>');
   }

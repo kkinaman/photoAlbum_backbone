@@ -45,11 +45,24 @@
     <div class='container'>
       <div class='row'>
         <div class="col-md-4">
+
+          <form class='newImageForm'>
+            <h4>Add your own image!</h4>
+            <div class="form-group">
+              <label for="title">Image Title</label><input type='text' name='title'/>
+            </div>
+            <div class="form-group">
+              <label for="url">Url</label><input type='text' name='url'/>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+
           <ul id='photoList' class="list-group">
           </ul>
+
         </div>
-        <div class="col-md-5 col-md-offset-2" id='featPhoto'>
-          <div class="featImageDisplay"></div>
+        <div class="col-md-5 col-md-offset-1" id='featPhoto'>
+          <div class="featImageDisplay"><-- Click an image!</div>
           <h3><span class="featImageName leftAlign"></span></h3>
           <div class="rating rightAlign">
             <span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span>

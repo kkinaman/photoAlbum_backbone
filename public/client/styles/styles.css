@@ -1,7 +1,25 @@
+.newImageForm {
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  text-align: right;
+  background-color: #eee;
+}
+.newImageForm label {
+  padding-right: 10px;
+}
+
+form h4 {
+  color: #333;
+}
+
 .featImageDisplay {
-  width: 500px;
+  width: 600px;
   height: 400px;
   background-color: #eee;
+  font-size: 30px;
+  color: #aaa;
+  text-align: center;
+  line-height: 400px;
 }
 
 .list-group-item {
